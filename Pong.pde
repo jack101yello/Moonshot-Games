@@ -3,7 +3,7 @@ Player p1; // Left player
 Player p2; // Right player
 
 void setup() {
-  size(1500, 1000);
+  size(750, 500);
   rectMode(CENTER);
   textAlign(CENTER);
   textSize(30);
