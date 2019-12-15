@@ -47,7 +47,7 @@ class Player {
   void show() {
     fill(255); 
     stroke(255);
-    rect(x, y, 75, 75*5);
+    rect(x, y, 37, 37*5);
   }
 
   void move() {
@@ -59,10 +59,10 @@ class Player {
       p2.lastKey = key;
     }
     
-    if((lastKey == 'w' || lastKey == 'i') && y-187.5 > 0) {
+    if((lastKey == 'w' || lastKey == 'i') && y-93.75 > 0) {
       y -= speed;
     }
-    else if((lastKey == 's' || lastKey == 'k') && y+187.5 < height) {
+    else if((lastKey == 's' || lastKey == 'k') && y+93.75 < height) {
       y += speed;
     }
   }
@@ -77,7 +77,7 @@ class Ball {
   void show() {
     fill(255);
     stroke(255);
-    rect(x, y, 50, 50);
+    rect(x, y, 25, 25);
   }
 
   void move() {
@@ -86,13 +86,13 @@ class Ball {
   }
 
   void wallCollide() {
-    if (y+25 > height || y-25 < 0) {
+    if (y+12.5 > height || y-12.5 < 0) {
       yspeed = -yspeed;
     }
   }
 
   void playerCollide() {
-    if(((x-25 < p1.x+75/2) && y+25 < p1.y+187.5 && y-25 > p1.y-187.5) || (x+25 > p2.x-75/2) && y+25 < p2.y+187.5 && y-25 > p2.y-187.5) {
+    if(((x-12.5 < p1.x+75/4) && y+12.5 < p1.y+93.75 && y-12.5 > p1.y-93.75) || (x+12.5 > p2.x-75/4) && y+12.5 < p2.y+93.75 && y-12.5 > p2.y-93.75) {
       xspeed = -xspeed;
     }
   }
