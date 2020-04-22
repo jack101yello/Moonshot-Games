@@ -1,4 +1,3 @@
 To do:
-- Decrease Pong player and ball size by a factor of 2-3
-- Add more games
-- Add links back to the homepage from game pages
+- Implement user system (long-term goal)
+- Add a coming soon page for The Medieval Game
